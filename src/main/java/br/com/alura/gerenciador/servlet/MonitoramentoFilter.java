@@ -12,6 +12,13 @@ import javax.servlet.annotation.WebFilter;
 
 //@WebFilter( urlPatterns = "/unicaEntrada")
 public class MonitoramentoFilter implements Filter {
+	
+    /**
+     * Default constructor. 
+     */
+    public MonitoramentoFilter() {
+        // TODO Auto-generated constructor stub
+    }
 
 	@Override
 	public void destroy() {

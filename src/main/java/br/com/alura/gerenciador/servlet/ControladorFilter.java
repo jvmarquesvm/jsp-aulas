@@ -17,7 +17,7 @@ import br.com.alura.gerenciador.acao.Acao;
 /**
  * Servlet Filter implementation class ControladorFilter
  */
-@WebFilter("/ControladorFilter")
+//@WebFilter("/ControladorFilter")
 public class ControladorFilter implements Filter {
 
     /**

@@ -21,7 +21,7 @@ import javax.servlet.RequestDispatcher;
 /**
  * Servlet implementation class UnicaEntradaServlet
  */
-@WebServlet("/unicaEntrada")
+//@WebServlet("/unicaEntrada")
 public class UnicaEntradaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -38,8 +38,8 @@ public class UnicaEntradaServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			                                                 throws ServletException, IOException {
 		
-//		HttpSession session = request.getSession();
 		String paramAcao = request.getParameter("acao");
+//		HttpSession session = request.getSession();
 //		boolean ehUmaAcaoProtegida = !( paramAcao.equals("Login") || paramAcao.equals("LoginForm") );
 //		
 //		if(session.getAttribute("usuarioLogado") == null && ehUmaAcaoProtegida) {
