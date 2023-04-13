@@ -1,4 +1,4 @@
-package br.com.alura.gerenciador.servlet;
+package br.com.alura.gerenciador.modelo;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -9,6 +9,7 @@ public class Banco {
 	//Atributo estáticos
 	private static List<Empresa> empresas = new ArrayList<>();
 	private static Integer chaveSequencial = 1;
+	private static List<Usuario> usuarios = new ArrayList<>();
 	
 	//É executado quando a VM carrega a classe 
 	static {
@@ -20,6 +21,17 @@ public class Banco {
 		empresa2.setNome("Google");
 		empresas.add(empresa1);
 		empresas.add(empresa2);
+		
+		Usuario u1 = new Usuario();
+	    u1.setLogin("j.victor");
+	    u1.setSenha("12345");
+
+	    Usuario u2 = new Usuario();
+	    u2.setLogin("ana");
+	    u2.setSenha("12345");
+
+	    usuarios.add(u1);
+	    usuarios.add(u2);
 	}
 
 	public void adiciona(Empresa empresa) {
@@ -40,8 +52,9 @@ public class Banco {
 				it.remove();
 			}
 		}
-		//Não usar o for com ArrayList - Enquanto está iterando sobre essa lista
+		//Não usar o for com ArrayList - Usando for enquanto está iterando sobre essa lista
 		//não é possível modificar
+		//Para modificar a lista enquanto itera, utilizar o Iterator
 	}
 
 	public Empresa buscaEmpresaPorId(Integer id) {
@@ -52,6 +65,15 @@ public class Banco {
 		}
 		return null;
 		
+	}
+	
+	public Usuario existeUsuario(String login, String senha) {
+	    for(Usuario usuario : usuarios) {
+	        if(usuario.ehIgual(login, senha)) { 
+	            return usuario;
+	        }
+	    }
+	    return null;
 	}
 
 }

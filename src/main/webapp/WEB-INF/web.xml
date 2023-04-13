@@ -17,5 +17,44 @@
   	<servlet-name>OiMundoServlet</servlet-name>
   	<url-pattern>/ola</url-pattern>
   </servlet-mapping>
+  
+  <!-- Tempo de sessão de desuso em min -->
+  <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config> 
+    
+  <!-- Padrão JAAS 
+   <login-config>
+     <auth-method>BASIC</auth-method>
+   </login-config>
+
+   <security-role>
+       <role-name>ADMINISTRADOR</role-name>
+   </security-role>
+
+   <security-role>
+       <role-name>USUARIO</role-name>
+   </security-role>
+
+   <security-constraint>
+       <web-resource-collection>
+           <web-resource-name>acesso controlador</web-resource-name>
+           <url-pattern>/unicaEntrada</url-pattern>
+       </web-resource-collection>
+       <auth-constraint>
+           <role-name>ADMINISTRADOR</role-name>
+       </auth-constraint>
+   </security-constraint>
+
+   <security-constraint>
+       <web-resource-collection>
+           <web-resource-name>acesso a paginas html</web-resource-name>
+           <url-pattern>*.html</url-pattern>
+
+       </web-resource-collection>
+       <auth-constraint>
+           <role-name>USUARIO</role-name>
+       </auth-constraint>
+   </security-constraint> -->
 
 </web-app>

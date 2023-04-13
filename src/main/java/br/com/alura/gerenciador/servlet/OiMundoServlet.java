@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 //Pode definir mais que uma url para o servlet
 //Servlet sendo iniciado na subida do servidor
-@WebServlet( urlPatterns = {"/oi", "/oioi"}, loadOnStartup = 1, description = "Servlet Inicial")
+//@WebServlet( urlPatterns = {"/oi", "/oioi"}, loadOnStartup = 1, description = "Servlet Inicial")
 public class OiMundoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
