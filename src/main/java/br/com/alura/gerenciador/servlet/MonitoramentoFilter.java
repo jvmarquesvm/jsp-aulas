@@ -10,7 +10,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter( urlPatterns = "/unicaEntrada")
+//@WebFilter( urlPatterns = "/unicaEntrada")
 public class MonitoramentoFilter implements Filter {
 
 	@Override
@@ -22,6 +22,7 @@ public class MonitoramentoFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			                                                 throws IOException, ServletException {
+		System.out.println("O filter Monitoramento foi chamado");
 		long antes = System.currentTimeMillis();
 		String acao = request.getParameter("acao");
 		

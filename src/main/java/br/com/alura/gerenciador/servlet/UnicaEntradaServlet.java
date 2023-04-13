@@ -38,14 +38,14 @@ public class UnicaEntradaServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			                                                 throws ServletException, IOException {
 		
-		HttpSession session = request.getSession();
+//		HttpSession session = request.getSession();
 		String paramAcao = request.getParameter("acao");
-		boolean ehUmaAcaoProtegida = !( paramAcao.equals("Login") || paramAcao.equals("LoginForm") );
-		
-		if(session.getAttribute("usuarioLogado") == null && ehUmaAcaoProtegida) {
-			response.sendRedirect("unicaEntrada?acao=LoginForm");
-			return;
-		}
+//		boolean ehUmaAcaoProtegida = !( paramAcao.equals("Login") || paramAcao.equals("LoginForm") );
+//		
+//		if(session.getAttribute("usuarioLogado") == null && ehUmaAcaoProtegida) {
+//			response.sendRedirect("unicaEntrada?acao=LoginForm");
+//			return;
+//		}
 		
         String nomeDaClasse = "br.com.alura.gerenciador.acao." + paramAcao;
 		String retorno = "";
